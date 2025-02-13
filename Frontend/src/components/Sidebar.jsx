@@ -13,7 +13,7 @@ const Sidebar = () => {
 
   useEffect(() => {
     getUser();
-  }, []); // i change this to getUser
+  }, [getUser]);
 
   // console.log(users);
 
@@ -27,9 +27,9 @@ const Sidebar = () => {
   // console.log(filtredUsers);
 
   return (
-    <aside className=" h-full w-full lg:w-72 border-r border-base-300 flex flex-col transition-all duration-200">
-      <div className=" border-b  border-base-300 w-full p-5">
-        <div className="flex items-center gap-2">
+    <aside className=" h-full w-fit  lg:w-72 border-r border-base-300 flex flex-col transition-all duration-200">
+      <div className=" border-b  border-base-300 w-full p-4 ">
+        <div className="flex items-center   gap-2">
           <Users className="size-6" />
           <span className="font-medium hidden lg:block">Contact Me</span>
         </div>

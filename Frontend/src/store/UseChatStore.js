@@ -19,7 +19,7 @@ export const useChatStore = create((set, get) => ({
       set({ users: responce.data }); // i add this []
     } catch (error) {
       console.log(error);
-      toast.error(error.response.data.message || "Failed to fetch users"); // i add this  || ""
+      toast.error(error.response.data.message); // i add this  || ""
     } finally {
       set({ isUserLoading: false });
     }
@@ -57,7 +57,7 @@ export const useChatStore = create((set, get) => ({
 
     const socket = UseAuthStore.getState().socket;
 
-    console.log(socket);
+    // console.log(socket);
 
     socket.on("newMessage", (newMessage) => {
       // if (newMessage.senderId !== selectedUser._id) return;
